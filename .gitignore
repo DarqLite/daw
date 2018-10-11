@@ -1,22 +1,29 @@
 #include <iostream>
-#include <ctime>
-
 using namespace std;
 
 int main()
 {
+    inceput:
+
     int a,b;
     cout <<"a=";cin >> a;
     cout <<"b=";cin >> b;
-    switch(ctime) 
+
+    if(a==b) goto cazul2;
+    else goto cazul1;
     {
-    case 1:
-        if (a==b) cout << "sunt egale";
-        else break;
-    case 2:
-        if (a>b) cout << "este mai mare a";
-        else cout << "este mai mare b";
+    cazul1:
+
+         if (a>b) cout << "A este mai mare.";
+         else cout << "B este mai mare.";
+
+    cazul2:
+
+        if (a==b) cout << "Ambele sunt egale.";
+        else {};
     }
-    return 0;
-    
+
+    cout << endl;
+    goto inceput;
+
 }
